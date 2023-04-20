@@ -22,7 +22,7 @@ public class TodoResource {
 
 
     @GetMapping("/users/{username}/todos")
-    public Todo retrieveAllTodosForSpecificUser(@PathVariable String username, @RequestParam(defaultValue = "ABCDEF", required = false) String name) {
+    public Todo retrieveAllTodosForSpecificUser(@PathVariable String username, @RequestParam(defaultValue = "retrieveAllTodosForSpecificUser", required = false) String name) {
         logger.info(name);
         return TODOS_LIST.get(0);
     }
